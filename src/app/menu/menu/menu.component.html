@@ -1,7 +1,7 @@
 <div class="contenedor-padre">
     <mat-toolbar class="barra" color="warn">
         <mat-toolbar-row>
-            <button (click)="cajon.toggle" mat-icon-button>
+            <button (click)="cajon.toggle()" mat-icon-button>
                 <mat-icon>menu</mat-icon>
             </button>
             <span>
@@ -12,6 +12,8 @@
             </span>
         </mat-toolbar-row>
     </mat-toolbar>
+
+
     <mat-sidenav-container class="contenido">
         <mat-sidenav style="min-width:300px;" #cajon mode="side" opened>
             <mat-nav-list>
@@ -19,6 +21,11 @@
                     <mat-icon color="accent">add</mat-icon>
                     Agregar alumno
                 </a>
+                <a mat-list-item routerLinkActive="active" routerLink="verAlumnos" href="">
+                    <mat-icon color="primary">perm_identity</mat-icon>
+                    Ver alumno
+                </a>
+
             </mat-nav-list>
             <mat-accordion>
                 <mat-expansion-panel>
@@ -39,7 +46,7 @@
             </mat-accordion>
         </mat-sidenav>
         <mat-sidenav-container class="padding-10">
-            <!--router-outle></router-outle-->
+            <router-outlet>  </router-outlet>
         </mat-sidenav-container>
     </mat-sidenav-container>
 </div>

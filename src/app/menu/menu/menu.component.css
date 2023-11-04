@@ -1,6 +1,6 @@
 .contenedor-padre{
     display: flex;
-    flex-wrap: column;
+    flex-flow: column;
     height: 100%;
 
 }
